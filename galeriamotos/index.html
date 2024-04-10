@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Autos Deportivos</title>
+    <style>
+        :root {
+            --black: #0a0908ff;
+            --gunmetal: #22333bff;
+            --almond: #eae0d5ff;
+            --khaki: #c6ac8fff;
+            --walnut-brown: #5e503fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--black);
+            color: var(--almond);
+        }
+
+        header {
+            background-color: var(--gunmetal);
+            color: var(--almond);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery,
+        .contact {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .car {
+            width: 300px;
+            border: 1px solid var(--khaki);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .car img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: var(--gunmetal);
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--almond);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .banner {
+            background-image: url(banner.jpeg); /* Reemplaza con tu imagen real */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--almond);
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galería de Autos Deportivos</h1>
+    </header>
+    <nav>
+        <a href="#" class="nav-link" onclick="showSection('gallery')">Galería</a>
+        <a href="#" class="nav-link" onclick="showSection('contact')">Contacto</a>
+    </nav>
+    <div class="banner">
+    </div>
+    <div class="gallery" id="gallery">
+            <div class="car">
+                <img src="aston.jpeg" alt="Carro 1">
+                <h3>Aston Martin</h3>
+            </div>
+            <div class="car">
+                <img src="ferrari.jpeg" alt="Carro 2">
+                <h3>Ferrari</h3>
+            </div>
+            <div class="car">
+                <img src="lamb.jpeg" alt="Carro 3">
+                <h3>Lamborghini</h3>
+            </div>
+        <!-- Agrega tus autos aquí -->
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contacto</h2>
+        <p>Email: info@autosdeportivos.com</p>
+        <p>Teléfono: +1 123-456-7890</p>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.gallery, .contact');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
