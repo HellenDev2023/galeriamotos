@@ -106,3 +106,15 @@ nav a {
     transform: scale(1.1);
     filter: contrast(120%);
 }
+
+@media (max-width: 768px) {
+    .car {
+        flex: 0 0 calc(50% - 20px); /* En dispositivos más pequeños, muestra dos elementos por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .car {
+        flex: 0 0 calc(100% - 20px); /* En dispositivos móviles, muestra un elemento por fila */
+    }
+}
