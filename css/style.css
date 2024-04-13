@@ -1,0 +1,108 @@
+:root {
+    --black: #0a0908ff;
+    --gunmetal: #22333bff;
+    --almond: #eae0d5ff;
+    --khaki: #c6ac8fff;
+    --walnut-brown: #5e503fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--almond);
+}
+
+header {
+    background-color: var(--gunmetal);
+    color: var(--almond);
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: var(--gunmetal);
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: var(--almond);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.banner {
+    background-image: url(banner.jpeg); /* Reemplaza con tu imagen real */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: var(--almond);
+    font-size: 24px;
+}
+
+.gallery {
+    display: flex; /* Cambia a flex para mostrar elementos en línea */
+    overflow-x: auto; /* Permite desplazarse horizontalmente si es necesario */
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.car {
+    width: 300px;
+    border: 1px solid var(--khaki);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Agrega transición de zoom */
+    text-align: center; /*Centra el contenido dentro del elemento */
+}
+
+.car img {
+    width: 100%;
+    height: auto;
+    opacity: .8;
+}
+
+.car:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+.news {
+    text-align: center;
+    padding: 20px;
+}
+
+.noticia {
+    display: inline-block;
+    margin: 10px;
+}
+
+.noticia img {
+    width: 300;
+    height: 200px;
+    border-radius: 10px;
+    border-color: rgb(73, 8, 73);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.noticia img:hover {
+    transform: scale(1.1);
+    filter: contrast(120%);
+}

@@ -4,122 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Autos Deportivos</title>
-    <style>
-        :root {
-            --black: #0a0908ff;
-            --gunmetal: #22333bff;
-            --almond: #eae0d5ff;
-            --khaki: #c6ac8fff;
-            --walnut-brown: #5e503fff;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--black);
-            color: var(--almond);
-        }
-
-        header {
-            background-color: var(--gunmetal);
-            color: var(--almond);
-            text-align: center;
-            padding: 20px;
-        }
-
-        .gallery,
-        .contact {
-            display: none;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .car {
-            width: 300px;
-            border: 1px solid var(--khaki);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .car img {
-            width: 100%;
-            height: auto;
-        }
-
-        nav {
-            background-color: var(--gunmetal);
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: var(--almond);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .active {
-            display: block;
-        }
-
-        .banner {
-            background-image: url(banner.jpeg); /* Reemplaza con tu imagen real */
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--almond);
-            font-size: 24px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>Galería de Autos Deportivos</h1>
+        <h5>Para los amantes del lujo y la velocidad</h5>
     </header>
     <nav>
+        <a href="#" class="nav-link" onclick="showSection('home')">Inicio</a>
         <a href="#" class="nav-link" onclick="showSection('gallery')">Galería</a>
+        <a href="#" class="nav-link" onclick="showSection('news')">Noticias</a>
         <a href="#" class="nav-link" onclick="showSection('contact')">Contacto</a>
     </nav>
     <div class="banner">
+        <img class="banner" src="banner.jpeg">
     </div>
-    <div class="gallery" id="gallery">
-            <div class="car">
-                <img src="aston.jpeg" alt="Carro 1">
-                <h3>Aston Martin</h3>
-            </div>
-            <div class="car">
-                <img src="ferrari.jpeg" alt="Carro 2">
-                <h3>Ferrari</h3>
-            </div>
-            <div class="car">
-                <img src="lamb.jpeg" alt="Carro 3">
-                <h3>Lamborghini</h3>
-            </div>
+
+    <div class="home" id="home">
+      <!--   <h2>Aston Martin</h2>
+        <p>
+            <h6>Aston Martin Lagonda Global Holdings PLC es un fabricante <br>
+            británico de automóviles de lujo y alto rendimiento. <br>
+            A lo largo de su historia, fue propiedad de diferentes <br>
+            consorcios y grupos automotrices, hasta constituirse a <br>
+            partir del año 2018 en una empresa de capital abierto a <br>
+            la que luego se sumó desde 2020 un consorcio liderado por <br>
+            el magnate canadiense Lawrence Stroll, propietario del 25% <br>
+            de su paquete accionarial.</h6> 
+            ¡Esto lo arreglaré luego para que el inicio se vea más estético!
+        </p> -->
+        
+            <h2>Exhibición de autos deportivos</h2>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery" id="gallery" style="display: none;">
+        <div class="car">
+            <img src="aston.jpeg" alt="Carro 1">
+            <h3>Aston Martin</h3>
+        </div>
+        <div class="car">
+            <img src="ferrari.jpeg" alt="Carro 2">
+            <h3>Ferrari</h3>
+        </div>
+        <div class="car">
+            <img src="lamb.jpeg" alt="Carro 3">
+            <h3>Lamborghini</h3>
+        </div>
+        <div class="car">
+            <img src="bugatti.jpeg" alt="Carro 4">
+            <h3>Bugatti</h3>
+        </div>  
+        <div class="car">
+            <img src="maserati.jpeg" alt="Carro 5">
+            <h3>Maserati</h3>
+        </div>    
         <!-- Agrega tus autos aquí -->
     </div>
-    <div class="contact" id="contact">
+
+    <div class="news" id="news" style="display:none;"> <!-- Agregamos style="display:none;" para ocultarla por defecto -->
+        <h2>Noticias</h2>
+        <div class="noticia">
+            <a href="https://motor.elpais.com/actualidad/ferrari-f40-recuperado-tras-robo-hotel-monza-2000/">
+                <img src="ferarri2.jpg" alt="Noticia 1">
+                <h4>Se repite el milagro y recuperan otro Ferrari robado hace más de 20 años: ¿cómo lo han hecho?</h4>
+            </a>
+        </div>
+        <div class="noticia">
+            <a href="https://motor.elpais.com/supercoches/mclaren-artura-spider/">
+                <img src="McLaren-Artura-Spider.jpg" alt="Noticia 2">
+                <h4>McLaren Artura Spider: deportivo, híbrido enchufable y ahora también descapotable</h4>
+            </a>
+        </div>
+        <div class="noticia">
+            <a href="https://motor.elpais.com/supercoches/el-ferrari-que-solo-van-a-tener-cinco-personas-en-todo-el-mundo/">
+                <img src="Ferrari-296-GTB.jpg" alt="Noticia 3">
+                <h4>El Ferrari que solo van a tener cinco personas en todo el mundo</h4>
+            </a>
+        </div>
+        <div class="noticia">
+            <a href="https://motor.elpais.com/supercoches/cupra-darkrebel-lado-mas-rebelde-futurista/">
+                <img src="cupra.jpg" alt="Noticia 4">
+                <h4>DarkRebel, el lado más rebelde y futurista de Cupra</h4>
+            </a>
+        </div>
+        <!-- Agrega más noticias-->
+    </div>
+
+    <div class="contact" id="contact" style="display:none;"> <!-- También ocultamos la sección de contacto -->
         <h2>Contacto</h2>
         <p>Email: info@autosdeportivos.com</p>
         <p>Teléfono: +1 123-456-7890</p>
     </div>
+
     <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.gallery, .contact');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.home, .gallery, .news, .contact');
+        sections.forEach(section => {
+            section.style.display = 'none'; // Oculta todas las secciones
+        });
+        document.getElementById(sectionId).style.display = 'block'; // Muestra la sección deseada
+
+        if (sectionId === 'gallery') {
+            document.getElementById(sectionId).style.display = 'flex'; // Asegura que la galería se muestre como flexbox
         }
+    }
     </script>
 </body>
 </html>
-
-
-
-
