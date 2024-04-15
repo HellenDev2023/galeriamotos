@@ -1,120 +1,69 @@
 :root {
-    --black: #0a0908ff;
-    --gunmetal: #22333bff;
-    --almond: #eae0d5ff;
-    --khaki: #c6ac8fff;
-    --walnut-brown: #5e503fff;
+    --black: #343a40; /* Usando un color oscuro como fondo principal */
+    --gunmetal: #495057; /* Un tono oscuro para elementos de fondo como la barra de navegación */
+    --almond: #f8f9fa; /* Un color claro para el texto que contraste bien con los colores oscuros */
+    --khaki: #f0e68c; /* Un tono medio para detalles y acentos */
+    --walnut-brown: #5e503f; /* Color oscuro para bordes y sombras */
 }
 
 body {
+    background-color: var(--black);
+    color: var(--almond);
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--black);
-    color: var(--almond);
 }
 
-header {
-    background-color: var(--gunmetal);
-    color: var(--almond);
-    text-align: center;
-    padding: 20px;
-}
-
-nav {
-    background-color: var(--gunmetal);
-    text-align: center;
-    padding: 10px;
-}
-
-nav a {
-    color: var(--almond);
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.banner {
-    background-image: url(banner.jpeg); /* Reemplaza con tu imagen real */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    width: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    color: var(--almond);
-    font-size: 24px;
-}
-
-.gallery {
-    display: flex; /* Cambia a flex para mostrar elementos en línea */
-    overflow-x: auto; /* Permite desplazarse horizontalmente si es necesario */
-    gap: 20px;
-    padding: 20px;
-}
-
-.contact {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.car {
-    width: 300px;
-    border: 1px solid var(--khaki);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Agrega transición de zoom */
-    text-align: center; /*Centra el contenido dentro del elemento */
-}
-
-.car img {
+.banner img {
     width: 100%;
     height: auto;
-    opacity: .8;
+    object-fit: cover;
 }
 
-.car:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
-    opacity: 1;
-    filter: contrast(120%);
+.card {
+    background-color: var(--gunmetal);
+    border: none;
 }
 
-
-.news {
-    text-align: center;
-    padding: 20px;
+.card .card-img-top {
+    width: 100%;
+    height: 200px; /* Fija un alto constante para las imágenes de las tarjetas */
+    object-fit: cover;
 }
 
-.noticia {
-    display: inline-block;
-    margin: 10px;
+.card .card-title {
+    color: var(--almond);
 }
 
-.noticia img {
-    width: 300;
-    height: 200px;
-    border-radius: 10px;
-    border-color: rgb(73, 8, 73);
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.card-body {
+    background-color: var(--black);
 }
 
-.noticia img:hover {
-    transform: scale(1.1);
-    filter: contrast(120%);
+.navbar {
+    border-bottom: 3px solid var(--khaki);
+}
+
+.nav-link {
+    color: var(--almond)!important; /* !important para asegurar que se aplique sobre los estilos por defecto de Bootstrap */
+    font-size: 1.1em;
+}
+
+.nav-link:hover {
+    color: var(--khaki)!important; /* Cambia el color al pasar el ratón */
 }
 
 @media (max-width: 768px) {
-    .car {
-        flex: 0 0 calc(50% - 20px); /* En dispositivos más pequeños, muestra dos elementos por fila */
+    .navbar-nav {
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
-    .car {
-        flex: 0 0 calc(100% - 20px); /* En dispositivos móviles, muestra un elemento por fila */
+@media (max-width: 992px) {
+    .banner img {
+        height: 300px; /* Altura menor para banners en tablets y dispositivos móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    .card .card-img-top {
+        height: 150px; /* Altura ajustada para imágenes en dispositivos muy pequeños */
     }
 }
