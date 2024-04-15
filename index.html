@@ -5,112 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Autos Deportivos</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="bg-secondary text-white text-center p-3">
         <h1>Galería de Autos Deportivos</h1>
         <h5>Para los amantes del lujo y la velocidad</h5>
     </header>
-    <nav>
-        <a href="#" class="nav-link" onclick="showSection('home')">Inicio</a>
-        <a href="#" class="nav-link" onclick="showSection('gallery')">Galería</a>
-        <a href="#" class="nav-link" onclick="showSection('news')">Noticias</a>
-        <a href="#" class="nav-link" onclick="showSection('contact')">Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" onclick="showSection('home')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('gallery')">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('news')">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('contact')">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="banner">
-        <img class="banner" src="banner.jpeg">
-    </div>
 
-    <div class="home" id="home">
-      <!--   <h2>Aston Martin</h2>
-        <p>
-            <h6>Aston Martin Lagonda Global Holdings PLC es un fabricante <br>
-            británico de automóviles de lujo y alto rendimiento. <br>
-            A lo largo de su historia, fue propiedad de diferentes <br>
-            consorcios y grupos automotrices, hasta constituirse a <br>
-            partir del año 2018 en una empresa de capital abierto a <br>
-            la que luego se sumó desde 2020 un consorcio liderado por <br>
-            el magnate canadiense Lawrence Stroll, propietario del 25% <br>
-            de su paquete accionarial.</h6> 
-            ¡Esto lo arreglaré luego para que el inicio se vea más estético!
-        </p> -->
-        
-            <h2>Exhibición de autos deportivos</h2>
+    <div class="container mt-4">
+        <div class="banner">
+            <img src="banner.jpeg" class="img-fluid">
+        </div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="row" id="home">
+            <div class="col-lg-12">
+                <h2>Exhibición de autos deportivos</h2>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-    <div class="gallery" id="gallery" style="display: none;">
-        <div class="car">
-            <img src="aston.jpeg" alt="Carro 1">
-            <h3>Aston Martin</h3>
+        <div class="row" id="gallery" style="display: none;">
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="card">
+                    <img src="aston.jpeg" class="card-img-top" alt="Aston Martin">
+                    <div class="card-body">
+                        <h5 class="card-title">Aston Martin</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="card">
+                    <img src="ferrari.jpeg" class="card-img-top" alt="Ferrari">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrari</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="card">
+                    <img src="lamb.jpeg" class="card-img-top" alt="Lamborghini">
+                    <div class="card-body">
+                        <h5 class="card-title">Lamborghini</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="card">
+                    <img src="bugatti.jpeg" class="card-img-top" alt="Bugatti">
+                    <div class="card-body">
+                        <h5 class="card-title">Bugatti</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up">
+                <div class="card">
+                    <img src="maserati.jpeg" class="card-img-top" alt="Maserati">
+                    <div class="card-body">
+                        <h5 class="card-title">Maserati</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="car">
-            <img src="ferrari.jpeg" alt="Carro 2">
-            <h3>Ferrari</h3>
-        </div>
-        <div class="car">
-            <img src="lamb.jpeg" alt="Carro 3">
-            <h3>Lamborghini</h3>
-        </div>
-        <div class="car">
-            <img src="bugatti.jpeg" alt="Carro 4">
-            <h3>Bugatti</h3>
-        </div>  
-        <div class="car">
-            <img src="maserati.jpeg" alt="Carro 5">
-            <h3>Maserati</h3>
-        </div>    
-        <!-- Agrega tus autos aquí -->
-    </div>
 
-    <div class="news" id="news" style="display:none;"> <!-- Agregamos style="display:none;" para ocultarla por defecto -->
-        <h2>Noticias</h2>
-        <div class="noticia">
-            <a href="https://motor.elpais.com/actualidad/ferrari-f40-recuperado-tras-robo-hotel-monza-2000/">
-                <img src="ferarri2.jpg" alt="Noticia 1">
-                <h4>Se repite el milagro y recuperan otro Ferrari robado hace más de 20 años: ¿cómo lo han hecho?</h4>
-            </a>
+        <div class="row" id="news" style="display:none;">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="ferarri2.jpg" class="card-img-top" alt="Noticia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Se repite el milagro y recuperan otro Ferrari robado hace más de 20 años: ¿cómo lo han hecho?</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="McLaren-Artura-Spider.jpg" class="card-img-top" alt="Noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">McLaren Artura Spider: deportivo, híbrido enchufable y ahora también descapotable</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="Ferrari-296-GTB.jpg" class="card-img-top" alt="Noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">El Ferrari que solo van a tener cinco personas en todo el mundo</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="cupra.jpg" class="card-img-top" alt="Noticia 4">
+                    <div class="card-body">
+                        <h5 class="card-title">DarkRebel, el lado más rebelde y futurista de Cupra</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="noticia">
-            <a href="https://motor.elpais.com/supercoches/mclaren-artura-spider/">
-                <img src="McLaren-Artura-Spider.jpg" alt="Noticia 2">
-                <h4>McLaren Artura Spider: deportivo, híbrido enchufable y ahora también descapotable</h4>
-            </a>
-        </div>
-        <div class="noticia">
-            <a href="https://motor.elpais.com/supercoches/el-ferrari-que-solo-van-a-tener-cinco-personas-en-todo-el-mundo/">
-                <img src="Ferrari-296-GTB.jpg" alt="Noticia 3">
-                <h4>El Ferrari que solo van a tener cinco personas en todo el mundo</h4>
-            </a>
-        </div>
-        <div class="noticia">
-            <a href="https://motor.elpais.com/supercoches/cupra-darkrebel-lado-mas-rebelde-futurista/">
-                <img src="cupra.jpg" alt="Noticia 4">
-                <h4>DarkRebel, el lado más rebelde y futurista de Cupra</h4>
-            </a>
-        </div>
-        <!-- Agrega más noticias-->
-    </div>
 
-    <div class="contact" id="contact" style="display:none;"> <!-- También ocultamos la sección de contacto -->
-        <h2>Contacto</h2>
-        <p>Email: info@autosdeportivos.com</p>
-        <p>Teléfono: +1 123-456-7890</p>
+        <div class="row" id="contact" style="display:none;">
+            <div class="col-lg-12 text-center">
+                <h2>Contacto</h2>
+                <p>Email: info@autosdeportivos.com</p>
+                <p>Teléfono: +1 123-456-7890</p>
+            </div>
+        </div>
     </div>
 
     <script>
     function showSection(sectionId) {
-        const sections = document.querySelectorAll('.home, .gallery, .news, .contact');
+        const sections = document.querySelectorAll('.row');
         sections.forEach(section => {
             section.style.display = 'none'; // Oculta todas las secciones
         });
-        document.getElementById(sectionId).style.display = 'block'; // Muestra la sección deseada
-
-        if (sectionId === 'gallery') {
-            document.getElementById(sectionId).style.display = 'flex'; // Asegura que la galería se muestre como flexbox
-        }
+        document.getElementById(sectionId).style.display = 'flex'; // Muestra la sección deseada
     }
     </script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
